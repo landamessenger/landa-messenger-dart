@@ -28,9 +28,9 @@ Success response:
 
 ```json
 {
-	"response": {
-		"message_id": "bdcd418cd984aa552586d7394009cb5aa44a543218643063f63a5b158ac63c78",
-		"response": "work_done"
-	}
+  "response": {
+    "message_id": "bdcd418cd984aa552586d7394009cb5aa44a543218643063f63a5b158ac63c78",
+    "response": "work_done"
+  }
 }
 ```
