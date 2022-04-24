@@ -1,10 +1,3 @@
-# landa-messenger-dart
-
-Landa Messenger Dart API for sending messages to chats.
-
-Check the documentation in [Landa Messenger - Integration](https://landamessenger.com/integration).
-
-```dart
 import 'package:flutter/material.dart';
 import 'package:landa_messenger_dart/landa_messenger_dart.dart';
 
@@ -22,15 +15,3 @@ void main() async {
   );
   print(response.body);
 }
-```
-
-Success response:
-
-```json
-{
-	"response": {
-		"message_id": "bdcd418cd984aa552586d7394009cb5aa44a543218643063f63a5b158ac63c78",
-		"response": "work_done"
-	}
-}
-```
