@@ -11,28 +11,39 @@ abstract class BaseApi {
   abstract String endpoint;
 
   Uri methodUrl() {
-    if (Trace.current().frames.length < implContextIndex) {
+    String method;
+    if (Trace
+        .current()
+        .frames
+        .length < implContextIndex) {
       throw (exceptionContextError);
-    } else if (Trace.current().frames[implContextIndex].member == null ||
-        !Trace.current()
-            .frames[implContextIndex]
-            .member!
-            .contains(implContextStr)) {
+    } else if (Trace
+        .current()
+        .frames[implContextIndex].member == null) {
       throw (exceptionContextError);
-    }
-    var method = Trace.current()
+    } else if (!Trace
+        .current()
         .frames[implContextIndex]
         .member!
-        .split(implContextStr)
-        .last;
+        .contains(implContextStr)) {
+      method = Trace
+          .current()
+          .frames[implContextIndex]
+          .member!;
+    } else {
+      method = Trace
+          .current()
+          .frames[implContextIndex]
+          .member!
+          .split(implContextStr)
+          .last;
+    }
     return Uri.parse(
       '$api/$endpoint/$method',
     );
   }
 
-  Future<http.Response> execute(
-    dynamic data,
-  ) =>
+  Future<http.Response> execute(dynamic data,) =>
       http.post(
         methodUrl(),
         body: jsonEncode(data),
