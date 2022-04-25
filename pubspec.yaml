@@ -1,6 +1,6 @@
 name: landa_messenger_api
 description: Landa Messenger Dart API
-version: 0.0.2
+version: 0.0.3
 homepage: https://landamessenger.com/
 
 environment:

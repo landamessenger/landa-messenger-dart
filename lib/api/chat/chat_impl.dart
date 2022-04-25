@@ -53,7 +53,7 @@ class ChatImpl extends ChatApi {
     textColor ??= Colors.white;
     var tColor = '#${textColor.value.toRadixString(16).substring(2, 8)}';
 
-    return execute(<String, dynamic>{
+    return execute('send', <String, dynamic>{
       'chat_id': chatId,
       'api_key': apiKey,
       'title': title,

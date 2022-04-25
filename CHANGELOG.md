@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Fixed web support.
+
 ## 0.0.2
 
 * Fixed out of context function.
