@@ -29,22 +29,22 @@ class ChatImpl extends ChatApi {
      * Mandatory parameters
      */
     if (chatId.isEmpty) {
-      throw Exception('not valid chatId');
+      throw ('not valid chatId');
     } else if (apiKey.isEmpty) {
-      throw Exception('not valid apiKey');
+      throw ('not valid apiKey');
     } else if (title.isEmpty) {
-      throw Exception('not valid title');
+      throw ('not valid title');
     } else if (body.isEmpty) {
-      throw Exception('not valid body');
+      throw ('not valid body');
     }
 
     /**
      * Optional parameters
      */
     if (url != null && url.isEmpty) {
-      throw Exception('not valid url');
+      throw ('not valid url');
     } else if (image != null && image.isEmpty) {
-      throw Exception('not valid url');
+      throw ('not valid url');
     }
 
     backgroundColor ??= Colors.teal;
