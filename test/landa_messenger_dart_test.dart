@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:landa_messenger_dart/landa_messenger_dart.dart';
+import 'package:landa_messenger_api/landa_messenger_api.dart';
 
 void main() {
+  final api = LandaMessengerAPI();
+
   test('Create a Landa Messenger message', () async {
-    var response = await LandaMessengerDart().sendMessage(
+    var response = await api.chat.send(
       chatId:
           '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
       apiKey:

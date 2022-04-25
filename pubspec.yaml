@@ -1,4 +1,4 @@
-name: landa_messenger_dart
+name: landa_messenger_api
 description: Landa Messenger Dart library
 version: 0.0.1
 homepage: https://landamessenger.com/
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.4           # android   ios   linux   macos   web   windows
+  stack_trace: ^1.10.0    # android   ios   linux   macos   web   windows
 
 dev_dependencies:
   flutter_test:
