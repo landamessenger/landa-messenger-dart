@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Updated API param.
+
 ## 0.0.3
 
 * Fixed web support.
