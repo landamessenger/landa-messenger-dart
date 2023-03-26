@@ -7,7 +7,7 @@ abstract class ChatApi extends BaseApi {
   String endpoint = 'chat';
 
   Future<Response> send({
-    required String chatId,
+    required String id,
     required String apiKey,
     required String title,
     required String body,

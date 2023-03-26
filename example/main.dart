@@ -1,11 +1,12 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:landa_messenger_api/landa_messenger_api.dart';
 
 void main() async {
   final api = LandaMessengerAPI();
   var response = await api.chat.send(
-    chatId: '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
-    apiKey: 'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+    id: 'a5f788615aa9cfea09a6b5f5c3e15b87cc55d4e908e4baef731e06522a998321',
+    apiKey: 'a5f788615aa9cfea09a6b5f5c3e15b87cc55d4e908e4baef731e06522a998321',
     title: 'Test Dart Title',
     body: 'Test Dart body',
     url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -14,5 +15,7 @@ void main() async {
     backgroundColor: Colors.teal,
     textColor: Colors.white,
   );
-  print(response.body);
+  if (kDebugMode) {
+    print(response.body);
+  }
 }

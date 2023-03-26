@@ -8,10 +8,9 @@ void main() {
 
   test('Create a message', () async {
     var response = await api.chat.send(
-      chatId:
-          '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
+      id: '1cdd952f044d54cbaa8b6d582640348d5647bfc4babf46709c549fddbbe8c630',
       apiKey:
-          'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+          'c9fe244f8bf09760e959149921e845d6bf1473e6916e45db214d01df8d4ce95a',
       title: 'Test Dart Title',
       body: 'Test Dart body',
       url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -20,18 +19,16 @@ void main() {
       backgroundColor: Colors.teal,
       textColor: Colors.white,
     );
+    print(response.body);
     expect(response.statusCode, 200);
-    if (kDebugMode) {
-      print(response.body);
-    }
   });
 
   test('Fail with no chat ID', () async {
     expect(
       api.chat.send(
-        chatId: '',
+        id: '',
         apiKey:
-            'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+            'c9fe244f8bf09760e959149921e845d6bf1473e6916e45db214d01df8d4ce95a',
         title: 'Test Dart Title',
         body: 'Test Dart body',
         url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -40,15 +37,14 @@ void main() {
         backgroundColor: Colors.teal,
         textColor: Colors.white,
       ),
-      throwsA('not valid chatId'),
+      throwsA('not valid id'),
     );
   });
 
   test('Fail with no api key', () async {
     expect(
       api.chat.send(
-        chatId:
-            '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
+        id: '1cdd952f044d54cbaa8b6d582640348d5647bfc4babf46709c549fddbbe8c630',
         apiKey: '',
         title: 'Test Dart Title',
         body: 'Test Dart body',
@@ -65,10 +61,9 @@ void main() {
   test('Fail with no title', () async {
     expect(
       api.chat.send(
-        chatId:
-            '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
+        id: '1cdd952f044d54cbaa8b6d582640348d5647bfc4babf46709c549fddbbe8c630',
         apiKey:
-            'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+            'c9fe244f8bf09760e959149921e845d6bf1473e6916e45db214d01df8d4ce95a',
         title: '',
         body: 'Test Dart body',
         url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -84,10 +79,9 @@ void main() {
   test('Fail with no body', () async {
     expect(
       api.chat.send(
-        chatId:
-            '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
+        id: '1cdd952f044d54cbaa8b6d582640348d5647bfc4babf46709c549fddbbe8c630',
         apiKey:
-            'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+            'c9fe244f8bf09760e959149921e845d6bf1473e6916e45db214d01df8d4ce95a',
         title: 'Test Dart Title',
         body: '',
         url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -102,9 +96,9 @@ void main() {
 
   test('Fail with invalid chat ID', () async {
     var response = await api.chat.send(
-      chatId: '6defec5ad5a3f7aae617c81c54a24be135724cc708af4a168356ae',
+      id: '6defec5ad5a3f7aae617c81c54a24be135724cc708af4a168356ae',
       apiKey:
-          'b1209566c845136b70a12db9b562f0a6658e3bb9814302a23a73ef2be463cbea',
+          'c9fe244f8bf09760e959149921e845d6bf1473e6916e45db214d01df8d4ce95a',
       title: 'Test Dart Title',
       body: 'Test Dart body',
       url: 'https://github.com/landamessenger/landa-messenger-dart',
@@ -121,8 +115,7 @@ void main() {
 
   test('Fail with invalid api key', () async {
     var response = await api.chat.send(
-      chatId:
-          '6defec5ad5a3f7955788eaceaae617c81c54a24be135724cc708af4a168356ae',
+      id: '1cdd952f044d54cbaa8b6d582640348d5647bfc4babf46709c549fddbbe8c630',
       apiKey: 'b1209566c845136b70a302a23a73ef2be463cbea',
       title: 'Test Dart Title',
       body: 'Test Dart body',

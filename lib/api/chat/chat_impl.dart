@@ -15,7 +15,7 @@ class ChatImpl extends ChatApi {
 
   @override
   Future<http.Response> send({
-    required String chatId,
+    required String id,
     required String apiKey,
     required String title,
     required String body,
@@ -28,8 +28,8 @@ class ChatImpl extends ChatApi {
     /**
      * Mandatory parameters
      */
-    if (chatId.isEmpty) {
-      throw ('not valid chatId');
+    if (id.isEmpty) {
+      throw ('not valid id');
     } else if (apiKey.isEmpty) {
       throw ('not valid apiKey');
     } else if (title.isEmpty) {
@@ -54,7 +54,7 @@ class ChatImpl extends ChatApi {
     var tColor = '#${textColor.value.toRadixString(16).substring(2, 8)}';
 
     return execute('send', <String, dynamic>{
-      'chat_id': chatId,
+      'id': id,
       'api_key': apiKey,
       'title': title,
       'body': body,
