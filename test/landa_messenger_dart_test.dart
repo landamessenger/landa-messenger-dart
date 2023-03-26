@@ -19,7 +19,9 @@ void main() {
       backgroundColor: Colors.teal,
       textColor: Colors.white,
     );
-    print(response.body);
+    if (kDebugMode) {
+      print(response.body);
+    }
     expect(response.statusCode, 200);
   });
 
