@@ -2,7 +2,7 @@
 
 Landa Messenger Dart API for sending messages to chats.
 
-Check the documentation in [Landa Messenger - API](https://landamessenger.com/api).
+Check the documentation and test the integration from any chat access page in [Landa Messenger](https://landamessenger.com/).
 
 ```dart
 import 'package:flutter/material.dart';
